@@ -13,7 +13,7 @@ This is an independent Omarchy bar plugin. It reads the existing local provider 
 The plugin directory must be named `icedeep.ai-usage`:
 
 ```sh
-git clone <repository-url> ~/.config/omarchy/plugins/icedeep.ai-usage
+git clone https://github.com/Dair2Know/omarchy-ai-usage.git ~/.config/omarchy/plugins/icedeep.ai-usage
 ```
 
 Then add `{"id": "icedeep.ai-usage"}` to a section of `bar.layout` in `~/.config/omarchy/shell.json`.
