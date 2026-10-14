@@ -17,13 +17,13 @@ This is an independent Omarchy bar plugin. It reads the existing local provider 
 
 ## Install
 
-The plugin directory must be named `icedeep.ai-usage`:
+Run the native Omarchy installer:
 
 ```sh
-git clone https://github.com/Dair2Know/omarchy-ai-usage.git ~/.config/omarchy/plugins/icedeep.ai-usage
+omarchy plugin add https://github.com/Dair2Know/omarchy-ai-usage.git --enable
 ```
 
-Then add `{"id": "icedeep.ai-usage"}` to a section of `bar.layout` in `~/.config/omarchy/shell.json`.
+Omarchy confirms the repository, validates the plugin, and prompts for a bar section, with the manifest's `right` section selected by default.
 
 Left-click opens the dashboard, right-click refreshes, and middle-click switches provider. Press `R` in the open panel to refresh.
 
@@ -88,4 +88,10 @@ Sources: [Claude limits and resets](https://support.claude.com/en/articles/17007
 
 ## Uninstall
 
-Remove `{"id": "icedeep.ai-usage"}` from the bar layout in `~/.config/omarchy/shell.json`, then remove `~/.config/omarchy/plugins/icedeep.ai-usage`. The Codex companion record and its lock file can be removed from `~/.local/state/ai-usage-monitor/` if desired.
+Remove the plugin with Omarchy:
+
+```sh
+omarchy plugin remove icedeep.ai-usage
+```
+
+The Codex companion record and its lock file can be removed from `~/.local/state/ai-usage-monitor/` if desired.
