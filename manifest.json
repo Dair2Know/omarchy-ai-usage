@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "icedeep.ai-usage",
+  "name": "AI Usage Dashboard",
+  "version": "1.0.0",
+  "author": "icedeep",
+  "license": "MIT",
+  "description": "A standalone, read-only dashboard for AI usage pacing, resets, and provider-reported reset credits.",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "AI Usage",
+    "description": "Usage pacing, reset times, and provider-reported reset credits.",
+    "category": "AI",
+    "aliases": ["ai-usage", "usage-dashboard"],
+    "allowMultiple": false,
+    "defaultSection": "right",
+    "defaults": {
+      "refreshIntervalSec": 60
+    },
+    "schema": [
+      {
+        "key": "refreshIntervalSec",
+        "type": "integer",
+        "label": "Local data refresh interval (seconds)",
+        "min": 30,
+        "max": 300,
+        "step": 30,
+        "defaultValue": 60,
+        "description": "How often the widget rereads the local provider records. The Codex reset-credit read is throttled separately to 15 minutes."
+      }
+    ]
+  }
+}
