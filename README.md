@@ -2,6 +2,13 @@
 
 This is an independent Omarchy bar plugin. It reads the existing local provider usage records and adds a separate Codex read-only app-server collector for rate windows and reset-credit grants. It does not change the built-in Agents widget or provider records. The built-in record's `updatedAt` can be a collection scan time rather than the provider's actual sample time, so a displayed fresh age means “record last checked,” not a guaranteed provider-side sample timestamp.
 
+<p>
+  <img src="screenshots/claude.png" alt="Claude Code page: session, weekly and model windows, each with pace and a projection to reset" width="400">
+  <img src="screenshots/codex.png" alt="Codex page: a weekly window ahead of pace, and two banked reset credits with expiry dates" width="400">
+</p>
+
+*Screenshots use demo data.*
+
 ## Requirements
 
 - Omarchy with the shell bar, and its built-in AI agents usage records (`~/.local/state/omarchy/agents/usage/`) for Claude and Codex.
